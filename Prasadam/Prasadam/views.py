@@ -1,6 +1,9 @@
 #views.py
-from rest_framework.views import APIView
-from rest_framework.response import Response
-class HelloWorld(APIView):
-    def get(self, request):
-        return Response('HELLO WORLD! from Django.')
+from .models import Temple
+from .serializers import TempleSerializer
+
+from rest_framework import generics
+
+class TempleList (generics.ListAPIView):
+    queryset = Temple.objects.all()
+    serializer_class = TempleSerializer

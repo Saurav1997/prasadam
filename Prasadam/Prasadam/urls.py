@@ -19,5 +19,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello_world', views.HelloWorld.as_view())
+    path ('api/temple/', views.TempleList.as_view(), name='temple-list'),
 ]
