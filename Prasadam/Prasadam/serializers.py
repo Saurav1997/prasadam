@@ -4,4 +4,4 @@ from .models import Temple
 class TempleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Temple
-        fields = ('name', 'desc', 'modified_on')
+        fields = ('id','name', 'desc', 'modified_on')
